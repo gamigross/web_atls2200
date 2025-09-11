@@ -1,0 +1,117 @@
+body {
+    justify-content: center;
+background-color: black;
+}
+
+html {
+            font-family: expressway, sans-serif;
+            font-style: normal;
+            font-weight: 200;
+        }
+
+        .color-box {
+            height: 75px;
+            width: 200px;
+        }
+        #box1 {
+            background-color: #26FF84;
+        }
+        #box2 {
+            background-color: #07CE67;
+        }
+        #box3 {
+            background-color: #69FF47;
+        }
+        #box4 {
+            background-color: #10F7C5;
+        }
+
+        .small-text {
+            font-family: "expressway", sans-serif;
+font-weight: 400;
+font-style: normal;
+            font-size: 12px;
+            color:#26FF84;
+        }
+        h1 {
+            text-align: center;
+            font-family: "expressway", sans-serif;
+font-weight: 700;
+font-style: normal;
+            font-size: 28px;
+            color:#10F7C5;
+            margin-top: 24px;
+  margin-bottom: 32px;
+  margin-right: 16px;
+  margin-left: 16px;
+        }
+        h2 {
+            text-align: center;
+            font-family: "expressway", sans-serif;
+font-weight: 700;
+font-style: normal;
+            font-size: 24px;
+            color: #10F7C5;
+            margin-top: 16px;
+  margin-bottom: 24px;
+            margin-right: 16px;
+  margin-left: 16px;
+        }
+        h3 {
+            text-align: center;
+            font-family: "expressway", sans-serif;
+font-weight: 700;
+font-style: normal;
+            font-size: 20px;
+            color: #10F7C5;
+            margin-right: 16px;
+  margin-left: 16px;
+        }
+        p {
+            text-align: center;
+            font-family: "expressway", sans-serif;
+font-weight: 400;
+font-style: normal;
+            font-size: 14px;
+            color:#26FF84;
+            margin-top: 16px;
+  margin-bottom: 24px;
+  margin-right: 16px;
+  margin-left: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color:#69FF47;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color:#07CE67;
+        }
+
+        .button {
+            background-color: black;
+            border: 2px solid #26FF84;
+            margin-right: 16px;
+  margin-left: 16px;
+            font-weight: 700;
+            color: #26FF84;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color:#26FF84;
+            border: 2px solid #26FF84;
+            
+            color: black;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
