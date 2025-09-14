@@ -87,6 +87,11 @@ font-style: normal;
   margin-left: 15%;
         }
 
+        ul {
+            display:flex;
+            padding: 14px 16px;
+        }
+
         a {
             text-decoration: none;
             color:#69FF47;
