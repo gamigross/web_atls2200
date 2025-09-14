@@ -90,6 +90,7 @@ font-style: normal;
         ul {
             display:flex;
             padding: 14px 16px;
+            justify-content: center;
         }
 
         a {
