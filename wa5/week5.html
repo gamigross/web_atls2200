@@ -56,22 +56,26 @@
 
     const expandBtn = document.querySelector('.expand-btn');
     const details = document.querySelector('.card-content');
+    const btn = document.querySelector('button');
 
     expandBtn.addEventListener('click', showInfo);
 
+
     function showInfo() {
-        console.log("hi");
-        alert("this is an alert");
+        //alert("this is an alert");
         if (info == false) {
             details.style.display = "flex";
             info = true;
+            btn.innerText = '-';
+            btn.ariaLabel = "Collapse card";
         }
         else {
             details.style.display = "none";
             info = false;
+            btn.innerText = '+';
+            btn.ariaLabel = "Expand card";
         }
     }
-    
 
 </script>
 </body>
