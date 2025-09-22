@@ -73,16 +73,15 @@ a:visited{
 
     .nav-menu.show {
         position: absolute;
-        background-color: green;
         display: flex;
         align-items: center;
         flex-direction: column;
-        top: 75px;
-        right: 0px;
-        left: 0px;
-        width: 100%;
+        top: 125px;
+        right: 10px;
+        left: 10px;
         height: auto;
         padding: 10px;
+        border-radius: 5px;
     }
     .nav-menu a {
         margin: 20px;
