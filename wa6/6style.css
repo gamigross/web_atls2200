@@ -74,7 +74,7 @@ header {
     "mission-header mission-header mission-header"
     "mission mission mission"
     "register-header register-header register-header"
-    "register register register-form"
+    "register register-form register-form"
     "volunteer-header volunteer-header volunteer-header"
     "volunteer volunteer volunteer-form";
     width: 75%;
@@ -91,6 +91,7 @@ header {
     justify-content: center;
     border: 2px solid green;
     background-color: lightgreen;
+    border-radius: 5px;
     height: 50px;
     width: 300px;
 }
@@ -118,14 +119,33 @@ header {
 }
 .register-form{
     font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    cursor: pointer;
     grid-area: register-form;
+    height: 50px;
+    width: 100px;
 }
 #volunteer-text{
     grid-area: volunteer;
 }
 .volunteer-form{
     font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    cursor: pointer;
     grid-area: volunteer-form;
+    height: 50px;
+}
+.volunteer-form a:hover{
+    background-color: #DAE8D8;
+    color: darkgreen;
+    border: solid 1px darkgreen;
+    cursor: pointer;
 }
 /* The bad grid code 
 header {
