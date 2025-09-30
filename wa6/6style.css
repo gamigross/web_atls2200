@@ -128,6 +128,7 @@ header {
     grid-area: register-form;
     height: 50px;
     width: 100px;
+    text-align: center;
 }
 #volunteer-text{
     grid-area: volunteer;
