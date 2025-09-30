@@ -1,0 +1,298 @@
+body {
+background-color: #DAE8D8;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 30px;
+}
+
+html {
+    font-family: expressway, sans-serif;
+            font-style: normal;
+            font-weight: 200;
+}
+
+.light {
+    background-color: #DAE8D8;
+}
+.dark {
+    background-color: #4b4b4b;
+}
+.main-nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    align-content: center;
+    /* align-items:center; */
+}
+.nav-brand {
+    align-self: center;
+    font-size: 24px;
+}
+.nav-menu {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+.main-nav ul{
+    list-style: none;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    background-color: darkgreen;
+    border: solid 1px #DAE8D8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s, border .2s;
+}
+
+.nav-menu a:hover{
+    background-color: #DAE8D8;
+    color: darkgreen;
+    border: solid 1px darkgreen;
+    cursor: pointer;
+}
+a:visited{
+    text-decoration: none;
+}
+
+.nav-toggle{
+    display: none;
+}
+header {
+    font-size: 24px;
+}
+.info-console{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "about about about"
+    "mission-header mission-header mission-header"
+    "mission mission mission"
+    "register-header register-header register-header"
+    "register register-form register-form"
+    "volunteer-header volunteer-header volunteer-header"
+    "volunteer volunteer volunteer-form";
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+.head{
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    border: 2px solid green;
+    background-color: lightgreen;
+    border-radius: 5px;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+}
+#head-1{
+    grid-area: header;
+    justify-self: center;
+}
+#head-2{
+    grid-area: mission-header;
+}
+#head-3{
+    grid-area: register-header;
+}
+#head-4{
+    grid-area: volunteer-header;
+}
+#about-text{
+    grid-area: about;
+}
+#mission-text{
+    grid-area: mission;
+}
+#registration-text{
+    grid-area: register;
+}
+.register-form{
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    grid-area: register-form;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+#volunteer-text{
+    grid-area: volunteer;
+}
+.volunteer-form{
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    grid-area: volunteer-form;
+    height: 50px;
+    text-align: center;
+}
+.volunteer-form a:hover{
+    background-color: #DAE8D8;
+    color: darkgreen;
+    border: solid 1px darkgreen;
+    cursor: pointer;
+    text-align: center;
+}
+/* The bad grid code 
+header {
+    font-size: 18px;
+}
+.info-console{
+    display: grid;
+    grid-template-rows: repeat(11, minmax(1fr, 2fr));
+    grid-template-columns: repeat(5, minmax(1fr, 3fr));
+    justify-items: start;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    column-gap: 10px;
+    row-gap: 30px;
+    justify-content: space-between;
+    width: 500px;
+    height: 1200px;
+}
+.head{
+    border: 2px solid green;
+    height: 50px;
+    width: 100px;
+}
+.text{
+    height: 300px;
+    width: 100px;
+}
+#head-1{
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    background-color: aqua;
+    align-self: center;
+}
+#about-text{
+    grid-row: 2 / 4;
+    grid-column: 1 / 5;
+    background-color: blueviolet;
+    align-self: center;
+}
+#head-2{
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+    background-color:chartreuse;
+    align-self: center;
+}
+#mission-text{
+    grid-area: 4 / 5 / 2 / 4;
+    background-color:coral;
+}
+#head-3{
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+    background-color:darkgreen;
+    align-self: center;
+}
+#registration-text{
+    grid-area: 6 / 7 / 1 / 5;
+    background-color:darkcyan;
+}
+.register-form{
+    grid-area: 7 / 8 / 3 / 4;
+    background-color:deeppink;
+}
+#head-4{
+    grid-row: 8 / 9; 
+    grid-column: 2 / 4;
+    background-color:crimson;
+}
+#volunteer-text{
+    grid-area: 9 / 10 / 2 / 3;
+    background-color:dodgerblue;
+}
+.volunteer-form{
+    grid-area: 10 / 11 / 3 / 4;
+    background-color:goldenrod;
+} */
+@media (max-width: 768px) {
+    .nav-brand {
+        align-self:center;
+        font-size: 36px;
+        display: space-between;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.show {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        top: 125px;
+        right: 10px;
+        left: 10px;
+        height: auto;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .nav-menu a {
+        margin: 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+        transition: background-color .2s, color .2s, border .2s;
+    }
+
+    .nav-toggle{
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+        border: none;
+        background-color: green;
+        border-radius: 5px;
+        transition-duration: 0.2s;
+    }
+    span{
+        margin: 3px;
+        height: 5px;
+        border-radius: 2px;
+        background-color: black;
+        display: block;
+    }
+
+    .nav-toggle:hover {
+        background-color: #DAE8D8;
+        color: darkgreen;
+        border: solid 1px darkgreen;
+        cursor: pointer;
+    }
+}
