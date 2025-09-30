@@ -142,6 +142,7 @@ header {
     cursor: pointer;
     grid-area: volunteer-form;
     height: 50px;
+    width: 150px;
     text-align: center;
 }
 .volunteer-form a:hover{
@@ -150,6 +151,25 @@ header {
     border: solid 1px darkgreen;
     cursor: pointer;
     text-align: center;
+}
+
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: space-evenly;
+  width: 700px;
+  margin-top: 20px;
+}
+
+.date-grid div:first-child {
+    grid-column: 4;
+}
+.date-box{
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 120px;
+
 }
 /* The bad grid code 
 header {
@@ -249,6 +269,7 @@ header {
         height: auto;
         padding: 10px;
         border-radius: 5px;
+        background-color: rgb(0, 255, 0, 0.5);
     }
     .nav-menu a {
         margin: 20px;
@@ -287,5 +308,15 @@ header {
         color: darkgreen;
         border: solid 1px darkgreen;
         cursor: pointer;
+    }
+    .date-grid {
+        width: 70%;
+    }
+    .day-of-week {
+        width: 70%;
+    }
+    .date-box {
+        font-size: 12px;
+        height: 80px;
     }
 }
