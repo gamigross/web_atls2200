@@ -94,6 +94,7 @@ header {
     border-radius: 5px;
     height: 50px;
     width: 300px;
+    text-align: center;
 }
 #head-1{
     grid-area: header;
@@ -140,12 +141,14 @@ header {
     cursor: pointer;
     grid-area: volunteer-form;
     height: 50px;
+    text-align: center;
 }
 .volunteer-form a:hover{
     background-color: #DAE8D8;
     color: darkgreen;
     border: solid 1px darkgreen;
     cursor: pointer;
+    text-align: center;
 }
 /* The bad grid code 
 header {
