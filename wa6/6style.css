@@ -61,8 +61,73 @@ a:visited{
 .nav-toggle{
     display: none;
 }
-
-/* The grid code */
+header {
+    font-size: 24px;
+}
+.info-console{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "about about about"
+    "mission-header mission-header mission-header"
+    "mission mission mission"
+    "register-header register-header register-header"
+    "register register register-form"
+    "volunteer-header volunteer-header volunteer-header"
+    "volunteer volunteer volunteer-form";
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+.head{
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    border: 2px solid green;
+    background-color: lightgreen;
+    height: 50px;
+    width: 300px;
+}
+#head-1{
+    grid-area: header;
+    justify-self: center;
+}
+#head-2{
+    grid-area: mission-header;
+}
+#head-3{
+    grid-area: register-header;
+}
+#head-4{
+    grid-area: volunteer-header;
+}
+#about-text{
+    grid-area: about;
+}
+#mission-text{
+    grid-area: mission;
+}
+#registration-text{
+    grid-area: register;
+}
+.register-form{
+    font-size: 18px;
+    grid-area: register-form;
+}
+#volunteer-text{
+    grid-area: volunteer;
+}
+.volunteer-form{
+    font-size: 18px;
+    grid-area: volunteer-form;
+}
+/* The bad grid code 
 header {
     font-size: 18px;
 }
@@ -137,7 +202,7 @@ header {
 .volunteer-form{
     grid-area: 10 / 11 / 3 / 4;
     background-color:goldenrod;
-}
+} */
 @media (max-width: 768px) {
     .nav-brand {
         align-self:center;
