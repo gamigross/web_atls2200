@@ -243,6 +243,7 @@ header {
     grid-area: 10 / 11 / 3 / 4;
     background-color:goldenrod;
 } */
+
 @media (max-width: 768px) {
     .nav-brand {
         align-self:center;

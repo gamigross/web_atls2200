@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
 const form = document.querySelector('.register-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
-
+let isValid = false;
 //Real-time validation
 emailInput.addEventListener('blur', function() {
     validateEmail(emailInput);
@@ -21,6 +21,7 @@ form.addEventListener("submit", function(event) {
 //Validate all fields before submission by calling functions defined further down. 
 //The preventDefault method prevents the user from submitting the form blank or without the requirements laid out in the validation functions.
     if (!validateName(nameInput)) isValid = false;
+//^ I don't call that function but if I delete this line I get the 404 error after submitting.
     if (!validateEmail(emailInput)) isValid = false;
 
     if (!isValid) {
@@ -66,7 +67,7 @@ function showError(input, message) {
 function removeError(input) {
     input.classList.remove('input-error');
 
-    //Remove error message if it exists
+//Remove error message if it exists
     const existingError = input.nextElementSibling;
     if (existingError && existingError.classList.contains('error-message')) {
       existingError.remove();
