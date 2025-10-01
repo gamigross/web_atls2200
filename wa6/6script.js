@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
 const form = document.querySelector('.register-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
-let isValid = false;
+
 //Real-time validation
 emailInput.addEventListener('blur', function() {
     validateEmail(emailInput);
@@ -98,3 +98,30 @@ function checkKey(key_code) {
 }
 
 navToggle.addEventListener('click', showMenu);
+
+//This is the code for the image carousel :))
+let currentIndex = 0; //Track the current slide index. Cycling through the numbers changes the image shown on screen.
+const images = document.querySelectorAll('.carousel-images img'); //Select all images in the carousel
+const totalImages = images.length; //Get the total number of images so they can be navigated through.
+
+//Function to change the slide, which is called upon by clicking the button as defined in the html script.
+function changeSlide(direction) {
+//Hide the current image
+    images[currentIndex].style.display = 'none';
+
+//Update the current index based on the direction
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+
+//Show the new current image
+    images[currentIndex].style.display = 'block';
+}
+
+//Initialize the carousel by displaying the first image
+function initializeCarousel() {
+    images.forEach((img, index) => {
+        img.style.display = index === currentIndex ? 'block' : 'none'; // Show only the current image
+    });
+}
+
+//Start the carousel
+initializeCarousel();

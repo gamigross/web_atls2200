@@ -165,7 +165,29 @@ header {
     border-radius: 5px;
     border: 2px solid black;
     height: 120px;
+}
+.carousel {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
 
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    max-width: 100%;
+    display: block;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 /* The bad grid code 
 header {
