@@ -2,11 +2,14 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu'); 
 //These are the variables for the interactive form selecting the form class plus name and email IDs.
 document.addEventListener('DOMContentLoaded', function(){
+//^ everything needs to be contained in this event listener for when the form is submitted.
+//This event fires when the page is processed. Without this event listener,
+//the user gets a 404 error message after pressing submit on the form.
 const form = document.querySelector('.register-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 
-// Real-time validation
+//Real-time validation
 emailInput.addEventListener('blur', function() {
     validateEmail(emailInput);
 });
