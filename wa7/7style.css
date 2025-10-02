@@ -375,19 +375,44 @@ header {
     }
     .date-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: repeat(5, 1fr);
         justify-content: space-evenly;
         width: 70%;
         margin-top: 20px;
         margin-left: 10%;
         margin-right: 10%;
+        grid-template-areas: 
+        "day mon"
+        "day tue"
+        "day wed"
+        "day thur"
+        "day fri"
+    }
+    #sched-mon {
+        grid-area: mon;
+    }
+    #sched-tue {
+        grid-area: tue;
+    }
+    #sched-wed {
+        grid-area: wed;
+    }
+    #sched-thur {
+        grid-area: thur;
+    }
+    #sched-fri {
+        grid-area: fri;
+    }
+    #no {
+        display: none;
     }
     .weekend {
         display: none;
     }
     .day-of-week {
         width: 70%;
+        grid-area: day;
     }
     .date-box {
         font-size: 12px;
