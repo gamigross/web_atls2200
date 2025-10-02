@@ -14,9 +14,11 @@ html {
 
 .light {
     background-color: #DAE8D8;
+    color: black;
 }
 .dark {
     background-color: #4b4b4b;
+    color: white;
 }
 .main-nav {
     display: flex;
