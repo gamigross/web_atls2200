@@ -375,19 +375,20 @@ header {
     }
     .date-grid {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr;
         grid-template-rows: repeat(5, 1fr);
         justify-content: space-evenly;
         width: 70%;
+        column-gap: 10px;
         margin-top: 20px;
         margin-left: 10%;
         margin-right: 10%;
         grid-template-areas: 
-        "day mon"
-        "day tue"
-        "day wed"
-        "day thur"
-        "day fri"
+        "day1 mon"
+        "day2 tue"
+        "day3 wed"
+        "day4 thur"
+        "day5 fri"
     }
     #sched-mon {
         grid-area: mon;
@@ -411,15 +412,32 @@ header {
         display: none;
     }
     .day-of-week {
-        width: 70%;
-        grid-area: day;
+        display: none;
+    }
+    #s-mon {
+        grid-area: day1;
+    }
+    #s-tue {
+        grid-area: day2;
+    }
+    #s-wed {
+        grid-area: day3;
+    }
+    #s-thu {
+        grid-area: day4;
+    }
+    #s-fri {
+        grid-area: day5;
     }
     .date-box {
         font-size: 12px;
         height: 80px;
     }
 }
-@media (600px <= width <= 800px) {
+@media (600px <= width <= 1200px) {
+    .secret-weekday{
+        display: none;
+    }
     .nav-brand {
         align-self:center;
         font-size: 36px;
@@ -482,10 +500,18 @@ header {
         cursor: pointer;
     }
     .date-grid {
-        width: 70%;
+        width: 580px;
     }
     .day-of-week {
-        width: 70%;
+        background-color: lightgreen;
+        display: grid;
+        grid-template-columns: repeat (7, 1fr);
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+        width: 580px;
+        margin-top: 20px;
+        grid-template-areas: 
+        "sun mon tue wed thur fri sat"
     }
     .date-box {
         font-size: 12px;
@@ -493,5 +519,7 @@ header {
     }
 }
 @media (width >= 1200px) {
-
+    .secret-weekday{
+        display: none;
+    }
 }
