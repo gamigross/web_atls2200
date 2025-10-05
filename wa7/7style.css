@@ -214,13 +214,14 @@ header {
 }
 .carousel {
     position: relative;
-    max-width: 800px; /* Adjust as needed */
-    margin: auto;
+    margin-top: 10px;
     overflow: hidden;
 }
 
 .carousel-images {
     display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.5s ease;
 }
 
@@ -312,6 +313,91 @@ header {
     background-color:goldenrod;
 } */
 @media (width <= 600px) {
+.info-console{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "about about about"
+    "mission-header mission-header mission-header"
+    "mission mission mission"
+    "register-header register-header register-header"
+    "register register register"
+    "register-form register-form register-form"
+    "volunteer-header volunteer-header volunteer-header"
+    "volunteer volunteer volunteer" 
+    ". volunteer-form .";
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: space-between;
+}
+.head{
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    border: 2px solid green;
+    background-color: lightgreen;
+    border-radius: 5px;
+    height: 60px;
+    width: 90%;
+    text-align: center;
+}
+#head-1{
+    grid-area: header;
+    justify-self: center;
+}
+#head-2{
+    grid-area: mission-header;
+}
+#head-3{
+    grid-area: register-header;
+}
+#head-4{
+    grid-area: volunteer-header;
+}
+#about-text{
+    grid-area: about;
+}
+#mission-text{
+    grid-area: mission;
+}
+#registration-text{
+    grid-area: register;
+}
+.register-form{
+    
+    font-size: 14px;
+    grid-area: register-form;
+    height: 150px;
+    width: 100px;
+}
+#volunteer-text{
+    grid-area: volunteer;
+}
+.volunteer-form{
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    grid-area: volunteer-form;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
+.volunteer-form a:hover{
+    background-color: #DAE8D8;
+    color: darkgreen;
+    border: solid 1px darkgreen;
+    cursor: pointer;
+    text-align: center;
+}
     .nav-brand {
         align-self:center;
         font-size: 24px;
@@ -433,6 +519,27 @@ header {
         font-size: 12px;
         height: 80px;
     }
+    .prev {
+        margin-left: 60px;
+        margin-right: 30px;
+        left: 10px;
+    }
+    .next {
+        right: 10px;
+    }
+    .carousel-images img {
+        width: 300px;
+        max-height: 180px;
+        display: block;
+    }  
+    .carousel {
+        position: relative;
+        max-width: 80%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }      
 }
 @media (600px <= width <= 1200px) {
     .secret-weekday{
@@ -442,10 +549,6 @@ header {
         align-self:center;
         font-size: 36px;
         display: space-between;
-    }
-
-    .nav-menu {
-        display: none;
     }
 
     .nav-menu.show {
@@ -470,35 +573,6 @@ header {
         transition: background-color .2s, color .2s, border .2s;
     }
 
-    .nav-toggle{
-        position: absolute;
-        top: 25px;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 50px;
-        height: 50px;
-        padding: 6px;
-        border: none;
-        background-color: green;
-        border-radius: 5px;
-        transition-duration: 0.2s;
-    }
-    span{
-        margin: 3px;
-        height: 5px;
-        border-radius: 2px;
-        background-color: black;
-        display: block;
-    }
-
-    .nav-toggle:hover {
-        background-color: #DAE8D8;
-        color: darkgreen;
-        border: solid 1px darkgreen;
-        cursor: pointer;
-    }
     .date-grid {
         width: 580px;
     }
@@ -517,9 +591,48 @@ header {
         font-size: 12px;
         height: 80px;
     }
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+    .carousel-images img {
+        width: 580px;
+        display: block;
+    }    
+    .carousel {
+        position: relative;
+        max-width: 80%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
 }
 @media (width >= 1200px) {
     .secret-weekday{
         display: none;
     }
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+    .carousel-images img {
+        width: 700px;
+        max-height: 500px;
+        display: block;
+    }
+    .carousel {
+    position: relative;
+    max-width: 80%;
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    overflow: hidden;
+}
 }
