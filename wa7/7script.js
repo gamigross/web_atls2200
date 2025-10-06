@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
 const form = document.querySelector('.register-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
+const btnClear = document.querySelector('#clear-data');
 
 //Real-time validation
 emailInput.addEventListener('blur', function() {
@@ -94,6 +95,11 @@ function saveFormData(formData) {
     storedFormData.push(formData);
     localStorage.setItem('formData', JSON.stringify(storedFormData));
 }
+
+document.querySelector('#clear-data').addEventListener('click', function() {
+    localStorage.clear();
+    location.reload();
+});
 
 function showMenu() {
     var shown = navMenu.classList.toggle("show");
