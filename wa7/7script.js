@@ -20,7 +20,7 @@ form.addEventListener("submit", function(event) {
 
 //Validate all fields before submission by calling functions defined further down. 
 //The preventDefault method prevents the user from submitting the form blank or without the requirements laid out in the validation functions.
-    if (!validateName(nameInput)) isValid = false;
+    //if (!validateName(nameInput)) isValid = false;
 //^ I don't call that function but if I delete this line I get the 404 error after submitting.
     if (!validateEmail(emailInput)) isValid = false;
 
@@ -72,6 +72,27 @@ function removeError(input) {
     if (existingError && existingError.classList.contains('error-message')) {
       existingError.remove();
     }
+}
+
+document.querySelector('.register-form').addEventListener('submit', 
+function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    const formData = {
+        name: name,
+        email: email,
+    };
+
+    saveFormData(formData);
+});
+
+function saveFormData(formData) {
+    const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
+    storedFormData.push(formData);
+    localStorage.setItem('formData', JSON.stringify(storedFormData));
 }
 
 function showMenu() {

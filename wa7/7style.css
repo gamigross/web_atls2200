@@ -82,7 +82,7 @@ header {
     margin-left: 20%;
     margin-right: 20%;
     column-gap: 30px;
-    row-gap: 30px;
+    row-gap: 70px;
     justify-content: space-between;
 }
 .head{
