@@ -236,82 +236,7 @@ header {
 .next {
     right: 10px;
 }
-/* The bad grid code 
-header {
-    font-size: 18px;
-}
-.info-console{
-    display: grid;
-    grid-template-rows: repeat(11, minmax(1fr, 2fr));
-    grid-template-columns: repeat(5, minmax(1fr, 3fr));
-    justify-items: start;
-    margin-top: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
-    column-gap: 10px;
-    row-gap: 30px;
-    justify-content: space-between;
-    width: 500px;
-    height: 1200px;
-}
-.head{
-    border: 2px solid green;
-    height: 50px;
-    width: 100px;
-}
-.text{
-    height: 300px;
-    width: 100px;
-}
-#head-1{
-    grid-row: 1 / 2;
-    grid-column: 2 / 4;
-    background-color: aqua;
-    align-self: center;
-}
-#about-text{
-    grid-row: 2 / 4;
-    grid-column: 1 / 5;
-    background-color: blueviolet;
-    align-self: center;
-}
-#head-2{
-    grid-row: 4 / 5;
-    grid-column: 2 / 4;
-    background-color:chartreuse;
-    align-self: center;
-}
-#mission-text{
-    grid-area: 4 / 5 / 2 / 4;
-    background-color:coral;
-}
-#head-3{
-    grid-row: 5 / 6;
-    grid-column: 2 / 4;
-    background-color:darkgreen;
-    align-self: center;
-}
-#registration-text{
-    grid-area: 6 / 7 / 1 / 5;
-    background-color:darkcyan;
-}
-.register-form{
-    grid-area: 7 / 8 / 3 / 4;
-    background-color:deeppink;
-}
-#head-4{
-    grid-row: 8 / 9; 
-    grid-column: 2 / 4;
-    background-color:crimson;
-}
-#volunteer-text{
-    grid-area: 9 / 10 / 2 / 3;
-    background-color:dodgerblue;
-}
-.volunteer-form{
-    grid-area: 10 / 11 / 3 / 4;
-    background-color:goldenrod;
-} */
+
 @media (width <= 600px) {
 .info-console{
     display: grid;
@@ -347,28 +272,7 @@ header {
     width: 90%;
     text-align: center;
 }
-#head-1{
-    grid-area: header;
-    justify-self: center;
-}
-#head-2{
-    grid-area: mission-header;
-}
-#head-3{
-    grid-area: register-header;
-}
-#head-4{
-    grid-area: volunteer-header;
-}
-#about-text{
-    grid-area: about;
-}
-#mission-text{
-    grid-area: mission;
-}
-#registration-text{
-    grid-area: register;
-}
+
 .register-form{
     
     font-size: 14px;
@@ -587,17 +491,7 @@ header {
         grid-template-areas: 
         "sun mon tue wed thur fri sat"
     }
-    .date-box {
-        font-size: 12px;
-        height: 80px;
-    }
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
+    
     .carousel-images img {
         width: 580px;
         display: block;
