@@ -73,10 +73,7 @@ function removeError(input) {
       existingError.remove();
     }
 }
-document.querySelector('#clear-data').addEventListener('click', function() {
-    localStorage.clear();
-    location.reload();
-});
+
 function showMenu() {
     var shown = navMenu.classList.toggle("show");
     navMenu.classList.toggle("hide");
