@@ -16,13 +16,15 @@
 
         }
         button:hover {
-            font-size: 36;
-            transition-property: rotation;
+            transition-property: rotation color;
+            transition-duration: 0.2s;
             animation-name: shake-death;
             animation-duration: 0.3s;
             animation-iteration-count: 2;
             cursor: pointer;
             animation-timing-function: ease-in-out;
+            background-color: red;
+            color: black;
         }
         @keyframes shake-death {
             from {
@@ -63,12 +65,11 @@
             width: 200px;
             border: 5px black solid;
             background-color: seagreen;
-            transition-property: width height;
+            transition-property: width;
             transition-duration: 1s;
         }
         .another-box:hover {
             width: 500px;
-            height: 500px;
         }
 
         @keyframes moving-box {
