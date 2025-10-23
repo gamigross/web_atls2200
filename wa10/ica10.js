@@ -15,7 +15,7 @@ async function newTrivia() {
     try {
         const response = await fetch(endpoint);
         if (!response.ok) {
-            throw Error(response.statusText);
+            throw Error(response.statusText)
         }
         const json = await response.json();
         //console.log(json);
@@ -32,7 +32,7 @@ async function newTrivia() {
 
 function displayTrivia(question) {
     const questionText = document.querySelector('#js-quote-text');
-    const answerText = document.querySelector("js-answer-text");
+    const answerText = document.querySelector("#js-answer-text");
     questionText.textContent = question;
     answerText.textContent = "";
 }
