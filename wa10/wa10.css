@@ -63,23 +63,17 @@ html {
     font-size: 20px;
   }
 
-  .boxes-sliding {
-    margin: 100px auto;
-    display: flex;
+  .copy:active {
+    background: white;
+    color: darkgreen;
   }
-  .group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+
+  .copy:disabled {
+    background: lightgray;
+    color: green;
+    cursor: not-allowed;
   }
-  .move-box {
-    height: 200px;
-    width: 200px;
-    border: 2px solid white;
-    align-content: center;
-  }
-  
+
   @media screen and (max-width: 600px) {
     .app {
       width: 100%;

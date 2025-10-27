@@ -8,32 +8,22 @@
     <link rel = "stylesheet" href = "wa10.css">
 </head>
 <body>
-    <div class="boxes-sliding">
-        <div class="group">
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-            <div class="move-box"></div>
-        </div>
-    </div>
     <div class="app">
         <header>Random Breaking Bad Quotes Except None of These are in Breaking Bad Probably 
             I couldn't find the documentation even after searching through the GitHub
             this is all really confusing so I just went with a basic quote generator :[</header>
         <div class="quotes">
-            <p id="quote">Praise Vince!</p>
+            <p id="quote"></p>
             <p id="author"></p>
         </div>
         <div class="controls">
+        <button type="button" class="copy" data-copy="#quote">Copy To Clipboard</button>
         <button type="button" id="new-quote">Get New Quote</button>
+        
         </div>
+        
     </div>
-    <div class="box-move"></div>
+    
     <script src="wa10.js"></script>
 </body>
 </html>

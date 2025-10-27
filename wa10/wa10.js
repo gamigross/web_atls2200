@@ -24,3 +24,19 @@ button.addEventListener("click", getQuote);
 
 // Load initial quote
 getQuote();
+
+document.querySelectorAll(".copy").forEach(copyButton => {
+    copyButton.addEventListener("click", () => {
+        const targetElement = document.querySelector(copyButton.dataset.copy);
+        const textToCopy = targetElement.textContent;
+
+        //console.log(textToCopy);
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const label = copyButton.querySelector(".copy");
+            copyButton.textContent="Copied!";
+            setTimeout(() => {
+                copyButton.textContent="Copy To Clipboard";
+            }, 1000);
+        })
+    })
+})
