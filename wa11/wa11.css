@@ -1,0 +1,34 @@
+.container {
+    margin: 50px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    padding: 20px;
+}
+
+#books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.book {
+    padding: 20px;
+    text-align: center;
+
+}
+.book img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.book h3 {
+    margin: 10px 0 5px;
+}
