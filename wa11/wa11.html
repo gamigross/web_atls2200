@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Search</title>
+    <title>epic book search</title>
     <link rel = "stylesheet" href = "wa11.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ghu6djp.css">
 </head>
 <body>
     <header>
-        <h1>Book Discovery</h1>
+        <h1>the coolest open library search site ever</h1>
         <div class="header-subtitle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            <span>Discover your next favorite book</span>
+        <h2>yep you can search for basically every book, try it out!</h2>
         </div>
     </header>
 
     <main>
         <div class="search-and-filter-bar">
             <div class="search-input-wrapper">
-                <input type="text" id="searchInput" placeholder="Dune, Isaac Asimov, science fiction...">
-                <button id="searchButton">Search</button>
+                <input type="text" id="searchInput" placeholder="search...">
+                <button id="searchButton">search</button>
             </div>
             <div class="filter-controls">
                 <div class="filter-group">
-                    <label for="sortFilter">Sort by:</label>
+                    <label for="sortFilter">sort by:</label>
                     <select id="sortFilter">
-                        <option value="relevance">Relevance</option>
-                        <option value="newest">Newest</option>
-                        <option value="oldest">Oldest</option>
+                        <option value="relevance">relevance</option>
+                        <option value="newest">newest</option>
+                        <option value="oldest">oldest</option>
                     </select>
                 </div>
                 <div class="filter-group checkbox-group">
                     <input type="checkbox" id="hasCoverFilter">
-                    <label for="hasCoverFilter">Only with Covers</label>
+                    <label for="hasCoverFilter">only books with covers</label>
                 </div>
             </div>
         </div>
 
         <div id="results-area">
-            <h2 id="results-title">Featured Books</h2>
+            <h2 id="results-title">featured books</h2>
             <div id="loader-container" class="results-grid"></div>
             <div id="results-container" class="results-grid"></div>
         </div>
