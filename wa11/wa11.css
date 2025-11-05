@@ -31,7 +31,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 120px;
 }
 
 .book {
@@ -58,4 +58,30 @@ h3 {
     border-radius: 4px;
     font-size: 24px;
     font-family: "bulletin-typewriter-mn", sans-serif;
+}
+
+button {
+    color: #463616;
+    border: 2px solid #937b4b;
+    background-color: beige;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: "bulletin-typewriter-mn", sans-serif;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.filter-group input[type=checkbox] {
+    background-color: beige;
+}
+
+select {
+    font-family: "bulletin-typewriter-mn", sans-serif;
+    background-color: beige;
+    border: 2px solid #937b4b;
+    border-radius: 4px;
+}
+
+.filter-controls {
+    margin: 20px;
 }
