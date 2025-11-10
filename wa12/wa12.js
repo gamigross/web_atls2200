@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function openModal(book) {
-    modalBody.innerHTML = '<p class="loading-text">Loading book details...</p>'
+    modalBody.innerHTML = '<p class="loading-text">loading book details...</p>'
     modalBackdrop.classList.remove("hidden")
 
     const coverUrl = book.cover_i

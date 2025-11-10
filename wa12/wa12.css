@@ -95,3 +95,7 @@ select {
 .filter-controls {
     margin: 20px;
 }
+
+.book-card {
+    padding-bottom: 50px;
+}
