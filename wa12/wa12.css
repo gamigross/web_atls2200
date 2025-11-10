@@ -71,6 +71,15 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color:#b9a680;
+    transition: 0.5s;
+}
+
+button:active {
+    background-color: #937b4b;
+}
+
 .filter-group input[type=checkbox] {
     background-color: beige;
 }
