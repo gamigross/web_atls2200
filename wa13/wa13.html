@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>epic book search</title>
+    <link rel = "stylesheet" href = "wa13.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ghu6djp.css">
+</head>
+<body>
+    <header>
+        <h1>the coolest open library search site ever</h1>
+        <div class="header-subtitle">
+        <h2>yep you can search for basically every book, try it out!</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-and-filter-bar">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" aria-label="type search term" placeholder="enter book here...">
+                <button id="searchButton">search</button>
+            </div>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="sortFilter">sort by:</label>
+                    <select id="sortFilter">
+                        <option value="relevance">relevance</option>
+                        <option value="newest">newest</option>
+                        <option value="oldest">oldest</option>
+                    </select>
+                </div>
+                <div class="filter-group checkbox-group">
+                    <input type="checkbox" id="hasCoverFilter">
+                    <label for="hasCoverFilter">only books with covers</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-area">
+            <h2 id="results-title">featured books</h2>
+            <div id="loader-container" class="results-grid"></div>
+            <div id="results-container" class="results-grid"></div>
+        </div>
+    </main>
+
+    <div id="modal-backdrop" class="hidden">
+        <div id="modal-content">
+            <button id="modal-close-btn">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+ <script src="wa13.js"></script>   
+</body>
+</html>
