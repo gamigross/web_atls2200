@@ -17,7 +17,12 @@ body {
 }
 
 .search-input-wrapper {
-    column-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -53,6 +58,20 @@ h3 {
     margin: 10px 0 5px;
 }
 
+#searchInput {
+    transition-property: width;
+    transition-duration: 1s;
+    width: 200px;
+}
+
+#searchInput:hover {
+    width: 300px;
+}
+
+#searchInput:active {
+    width: 300px;
+}
+
 .search-and-filter-bar input[type=text] {
     width: 300px;
     color: #463616;
@@ -73,15 +92,18 @@ button {
     font-family: "bulletin-typewriter-mn", sans-serif;
     padding: 4px;
     cursor: pointer;
+    width: 100px;
 }
 
 button:hover {
     background-color:#b9a680;
     transition: 0.5s;
+    border: 2px solid #b9a680;
 }
 
 button:active {
     background-color: #937b4b;
+    border: 2px solid #937b4b;
 }
 
 .filter-group input[type=checkbox] {
@@ -127,7 +149,7 @@ option {
     }
     
     .search-input-wrapper {
-        row-gap: 30px;
+        gap: 5px;
     }
 
     #searchButton {
