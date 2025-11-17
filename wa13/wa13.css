@@ -16,6 +16,10 @@ body {
     font-style: normal;
 }
 
+.search-input-wrapper {
+    column-gap: 5px;
+}
+
 h1 {
     font-size: 64px;
 }
@@ -107,4 +111,35 @@ option {
 
 .book-card {
     padding-bottom: 50px;
+}
+
+@media (width <= 600px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #results-title h2 {
+        font-size: 36px;
+    }
+    
+    .search-input-wrapper {
+        row-gap: 30px;
+    }
+
+    #searchButton {
+        width: 150px;
+        justify-content: center;
+        background-color: #d6c29b;
+        border: 2px solid beige;
+        border-radius: 4px;
+    }
+
+    #searchInput {
+        justify-content: center;
+        text-align: center;
+    }
 }
