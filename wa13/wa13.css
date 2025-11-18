@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 1px;
     align-items: center;
     justify-content: center;
 }
@@ -160,8 +160,23 @@ option {
         border-radius: 4px;
     }
 
+    #searchButton:active {
+        background-color: #937b4b;
+        color: beige;
+    }
+
     #searchInput {
         justify-content: center;
         text-align: center;
+        transition-property: none;
+        width: 200px;
+    }
+
+    #searchInput:active {
+        width: 200px;
+    }
+
+    #searchInput:hover {
+        width: 200px;
     }
 }
