@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silly button</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400);
+        html {
+        font-size: 62.5%;
+        font-family: "Roboto Slab";
+        box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+        box-sizing: inherit;
+        }
+
+        .btn--bg:after, .btn--bg:before {
+        content: "";
+        position: absolute;
+        top: -0.3rem;
+        left: -0.3rem;
+        transform: translateZ(-2rem);
+        width: 100%;
+        height: 100%;
+        padding: 0.3rem;
+        background-size: 100%;
+        background-repeat: repeat;
+        transition: opacity 0.35s linear;
+        border-radius: 0.5rem;
+        box-sizing: content-box;
+        }
+
+        .btn {
+        display: inline-block;
+        width: auto;
+        padding: 0.3rem;
+        box-sizing: inherit;
+        line-height: normal;
+        white-space: nowrap;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 3.4rem;
+        font-family: "Roboto Slab";
+        cursor: pointer;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        .btn--bg {
+        position: relative;
+        transform-style: preserve-3d;
+        transform: translateZ(1rem);
+        display: block;
+        margin: 5rem auto;
+        background: black;
+        border: 0;
+        border-radius: 0.25rem;
+        }
+        .btn--bg:before {
+        background-color: #26FF84;
+        background-image: -webkit-gradient(left bottom, left top, color-stop(30%, #26FF84), color-stop(90%, #10F7C5));
+        background-image: -webkit-linear-gradient(bottom right, #26FF84 30%, #10F7C5 90%);
+        /*background-image:
+            -moz-linear-gradient(bottom right, $color-1 30%, $color-2 90%);*/
+        /*background-image:
+            -o-linear-gradient(bottom right, $color-1 30%, $color-2 90%);*/
+        /*background-image:
+            linear-gradient(to top left, $color-1 30%, $color-2 90%);*/
+        }
+        .btn--bg:after {
+        padding: 0;
+        opacity: 0;
+        border: 0.3rem solid #26FF84;
+        }
+        .btn--bg:hover:before {
+        background-image: -webkit-gradient(left bottom, left top, color-stop(30%, transparent), color-stop(90%, transparent));
+        background-image: -webkit-linear-gradient(bottom right, transparent 30%, transparent 90%);
+        /*background-image:
+            -moz-linear-gradient(bottom right, $color-1 30%, $color-2 90%);*/
+        /*background-image:
+            -o-linear-gradient(bottom right, $color-1 30%, $color-2 90%);*/
+        /*background-image:
+            linear-gradient(to top left, $color-1 30%, $color-2 90%);*/
+        }
+        .btn--bg:hover:after {
+        opacity: 1;
+        }
+        .btn--bg:hover > .btn--bg__text:after {
+        opacity: 1;
+        -webkit-font-smoothing: antialiased;
+        }
+
+        .btn--bg__text {
+        position: relative;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: black;
+        color: #26FF84;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-gradient(left bottom, left top, color-stop(30%, #26FF84), color-stop(90%, #10F7C5));
+        background-image: -webkit-linear-gradient(bottom right, #26FF84 30%, #10F7C5 90%);
+        /*background-image:
+            -moz-linear-gradient(bottom right, $color-1 30%, $color-2 90%);*/
+        /*background-image:
+            -o-linear-gradient(bottom right, $color-1 30%, $color-2 90%);*/
+        /*background-image:
+            linear-gradient(to top left, $color-1 30%, $color-2 90%);*/
+        }
+        .btn--bg__text:after {
+        content: attr(data-btn);
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        padding: 0 1rem;
+        color: #26FF84;
+        -webkit-text-fill-color: initial;
+        transition: opacity 0.2s linear;
+        opacity: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn--bg">
+    <span class="btn--bg__text" data-btn="portfolio">portfolio</span>
+    </button>
+</body>
+</html>
