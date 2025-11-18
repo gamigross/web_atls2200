@@ -65,11 +65,11 @@ h3 {
 }
 
 #searchInput:hover {
-    width: 300px;
+    width: 250px;
 }
 
 #searchInput:active {
-    width: 300px;
+    width: 250px;
 }
 
 .search-and-filter-bar input[type=text] {
@@ -93,17 +93,24 @@ button {
     padding: 4px;
     cursor: pointer;
     width: 100px;
+    
+    transition-property: width;
+    transition-duration: 0.5s;
 }
 
 button:hover {
     background-color:#b9a680;
     transition: 0.5s;
     border: 2px solid #b9a680;
+    width: 110px;
+
 }
 
 button:active {
     background-color: #937b4b;
     border: 2px solid #937b4b;
+    width: 110px;
+
 }
 
 .filter-group input[type=checkbox] {
@@ -149,7 +156,7 @@ option {
     }
     
     .search-input-wrapper {
-        gap: 5px;
+        gap: 3px;
     }
 
     #searchButton {
@@ -179,4 +186,42 @@ option {
     #searchInput:hover {
         width: 200px;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #searchInput {
+        transition-property: none;
+        width: 200px;
+    }
+
+    #searchInput:active {
+        width: 200px;
+    }
+
+    #searchInput:hover {
+        width: 200px;
+    }
+
+    button {
+    color: #463616;
+    border: 2px solid #937b4b;
+    background-color: beige;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: "bulletin-typewriter-mn", sans-serif;
+    padding: 4px;
+    cursor: pointer;
+    width: 100px;
+    transition-property: none;
+}
+
+button:hover {
+    width: 100px;
+
+}
+
+button:active {
+    width: 100px;
+
+}
 }
