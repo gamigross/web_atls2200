@@ -87,12 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function createBookCard(book) {
     const title = book.title || "Title Unknown"
     const coverId = book.cover_i
-    const coverUrl = coverId ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg` : "https://via.placeholder.com/400x600.png?text=No+Cover"
+    const coverUrl = coverId ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg` : "nocover.png"
 
     const bookCard = document.createElement("div")
     bookCard.className = "book-card"
     bookCard.innerHTML = `
-      <img class="book-cover" src="${coverUrl}" alt="${title} cover art" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/220x300.png?text=No+Cover';">
+      <img class="book-cover" src="${coverUrl}" alt="${title} cover art" loading="lazy" onerror="this.onerror=null;this.src='nocover.png';">
       <div class="book-card-content">
         <h3>${title}</h3>
         <p>${book.author_name ? book.author_name.join(", ") : "Author Unknown"}</p>
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const coverUrl = book.cover_i
       ? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
-      : "https://via.placeholder.com/400x600.png?text=No+Cover"
+      : "nocover.png"
     const title = book.title || "Title Unknown"
     const author = book.author_name ? book.author_name.join(", ") : "Author Unknown"
     const publishYear = book.first_publish_year || "Unknown"
